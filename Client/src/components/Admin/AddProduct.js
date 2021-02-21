@@ -105,7 +105,15 @@ export const AddProduct = () => {
               placeholder='Price'
               name='price'
               onChange={(e) => {
-                setProductPrice(e.target.value);
+                if(e.target.value>0)
+                {
+                  setProductPrice(e.target.value);
+                }
+                else
+                {
+                  toast("Product Cannot be Added Since Price is Negative",{type:'error'});
+                }
+                
               }}
             />
           </div>

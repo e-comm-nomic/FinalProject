@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import { Container } from 'react-bootstrap';
+  import { Container } from 'react-bootstrap';
 
 export const AddProductFromHotel = () => {
 
@@ -110,7 +110,15 @@ export const AddProductFromHotel = () => {
               placeholder='Price'
               name='price'
               onChange={(e) => {
-                setProductPrice(e.target.value);
+                if(e.target.value)
+                {
+                  setProductPrice(e.target.value);  
+                }
+                else
+                {
+                  toast("Product Cannot be Added Since Price is Negative",{type:'error'});
+                }
+                
               }}
             />
           </div>

@@ -112,7 +112,14 @@ export const UpdateProduct = () => {
               placeholder='Price'
               defaultValue={productPrice}
               onChange={(e) => {
-                setProductPrice(e.target.value);
+                if(e.target.value>0)
+                {
+                  setProductPrice(e.target.value);
+                }
+                else
+                {
+                  toast("The Price you entered is negative.Please Enter Again",{type:'error'});
+                }
               }}
             />
           </div>

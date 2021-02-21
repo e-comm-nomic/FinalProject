@@ -53,7 +53,7 @@ app.use('/users', userRoute);
 app.use('/orders', orderRoute);
 
 
-app.use('./viewprod',viewprod);
+app.use('/viewprod',viewprod);
 app.use('/vieworder',vieworder);
 app.use('/viewuserOrd',viewuserOrd);
 app.use('/viewuserProd',viewuserProd);

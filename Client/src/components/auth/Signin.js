@@ -21,7 +21,7 @@ export function Signin () {
     email,password,
     })
       .then((response) => {
-        console.log(response.data[0])
+        console.log(response.data[0]);
         setUserData(response.data[0].user_id);
         localStorage.setItem('role', response.data[0].user_role);
         localStorage.setItem('user_id', response.data[0].user_id);

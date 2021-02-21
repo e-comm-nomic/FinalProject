@@ -92,6 +92,7 @@ export const UpdateOrders = () => {
                     </button>
                   </td>
                   <td>
+                    {val.status != 'Delivered' && (
                     <button
                       className='btn btn-success'
                       onClick={() => {
@@ -100,6 +101,7 @@ export const UpdateOrders = () => {
                     >
                       update 
                     </button>
+          )}
                   </td>
                 </tr>
               </tbody>

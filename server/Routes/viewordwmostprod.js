@@ -9,7 +9,7 @@ View Order vs No of Products
 */
 
 router.get('/', (req, res) => {
-    let qr = `SELECT order_id as x,COUNT(product_id) as y FROM ORDERS GROUP BY order_id`;
+    let qr = `SELECT order_id as label,COUNT(product_id) as y FROM ORDERS GROUP BY order_id`;
     con.query(qr, (err, result) => {
       if (err || result.length == 0) {
         console.log(err);
